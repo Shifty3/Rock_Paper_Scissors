@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Rock Paper Scissors</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <main>
+      <div class="heading">
+      <h1>Welcome to Rock-Paper-Scissors!</h1>
+      </div>
+      <div class="container">
+        <!-- displays player and cpu choices -->
+        <div class="result-box">
+          <div class="box player"></div>
+          <div class="box computer"></div>
+            <!-- <div class="computer-result"></div> -->
+          </div>
+        </div>
+        <!-- player chooses in input -->
+        <div class="input-form">
+          <form id="myForm">
+          <input
+            id="input"
+            type="text"
+            placeholder="Type rock, paper, or scissors"
+          required/>
+          <button id="submitButton" class="submission" type="submit">Submit</button>
+        </form>
+        </div>
+        <!-- keeps track of whos winning -->
+        <!-- <div class="score-title">
+          <div class="counter">Win</div>
+          <div class="counter">Tie</div>
+          <div class="counter">Lose</div>
+        </div>
+        <div class="score">
+          <div class="counter win"></div>
+          <div class="counter tie"></div>
+          <div class="counter lose"></div>
+        </div>
+      </div> -->
+      <div class="modal" id="myModal">
+        <div class="modal-content">
+          <span class="close" id="closeModal">&times;</span>
+          <div id="gameResult"></div>
+        </div>
+      </div>
+
+    </main>
+    <script src="main.js".js></script>
+  </body>
+</html>
