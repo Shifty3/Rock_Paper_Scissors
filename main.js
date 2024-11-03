@@ -13,23 +13,27 @@
  show if the player won or lost
  then we make another button called try again. 
  when we click on that button, it will start the game over. 
- 
-
  */
+
+
  const submitButton = document.querySelector("#submitButton");
  console.log(submitButton);
+  //  but first we need to get the input field
  let playerChoiceInput = document.getElementById("input");
  
+    //  player choose rock, paper, or scissors
  const playGame = function () {
    console.log("Sanity check! Play game!");
-   //  player choose rock, paper, or scissors
-   //  but first we need to get the input field
+
    let playerChoice = playerChoiceInput.value;
    //  then we need to validate the user's input to make sure it's rock/paper/scissors
    if (
      playerChoice === "rock" ||
+     playerChoice === "Rock" ||
      playerChoice === "paper" ||
-     playerChoice === "scissors"
+     playerChoice === "Paper" ||
+     playerChoice === "scissors" ||
+     playerChoice === "Scissors"
    ) {
      console.log(playerChoice);
    } else {
@@ -38,7 +42,7 @@
    //  then we need to make the use's choice pop up in the output
    const choice = document.querySelector(".player");
    choice.innerHTML = `You chose ${playerChoice}`;
- 
+   
    //  computer generate a random choice of the 3
    const computer = ["rock", "paper", "scissors","rock", "paper", "scissors","rock", "paper", "scissors"];
    //generates a random choice inside my array
@@ -49,29 +53,29 @@
    //  after we make that pop up in the computer output field
    const computerFinalChoice = document.querySelector(".computer");
    computerFinalChoice.innerHTML = `Bot chose ${computerChoice}`;
-   //  compare both the player and computer choices to determine who won
    
+   
+   //invokes the function that validates the player and computer choice
    testing(playerChoice, computerChoice);
-   //  then we create the pop up window to display who won.
- 
-   //  display the computer choice
-   //  display the player choice
-  
-   //  then we make another button called try again.
+
    return false;
  };
+
  //  then we need to add an event listner because we need to log the choices
+ //e.code allows me know what physical was pressed 
  function checkIfEnter(e) {
    console.log(e.code);
    if (e.code === "Enter") {
      playGame();
-   }
+   };
  
- }
+ };
  
+
+ //validates and returns if player won or not
  function testing(playerChoice, computerChoice) {
    let result;
- 
+ //  compare both the player and computer choices to determine who won
    if (playerChoice === computerChoice) {
      console.log("Aaaay it's a tie");
      result = "Aaaay it's a tie";
@@ -87,39 +91,11 @@
    } else {
      console.log("you loose");
      result = "you loose";
-   }
+   };
    //displays text for game result
    let gameResult = document.getElementById("gameResult");
    gameResult.innerHTML = `${result + '!!'}`;
- }
- 
- // function gameTracker(result){
- //   const win = document.querySelector(".win");
- //   const tie = document.querySelector(".tie");
- //   const lose = document.querySelector(".lose")
- //   let score = 0;
- 
- //   function updateWinScore(){
- //     win.textContent = score;
- //   }
- 
- //   if (result === "You win"){
- //     function winScore(){
- //       score++;
- //       updateWinScore();
- //     }
- //     winScore();
- //     console.log(score)
- //   } else if (result === "Aaaay it's a tie"){
- //     return score ++;
- //   } else {
- //     return score ++;
- //   }
- 
- 
- // }
- // gameTracker()
- 
+ };
  
  
    //this is going load the pop up window displaying if player won or lost
@@ -131,17 +107,17 @@
      //this is goign to open the modal
      function openModal(){
        modal.style.display = "block";
-     }
+     };
      //functoin to close the modal
      function close(){
        modal.style.display = "none";
-     }
+     };
    
      //open modal upon submission
      form.addEventListener("submit", function(event){
        event.preventDefault();
        openModal();
-     })
+     });
      //close modal whe clicking on the 'x'
      closeModal.onclick = close;
    
@@ -149,16 +125,16 @@
      window.onclick = function(event){
        if(event.target === modal){
          close()
-       }
-     }
+       };
+     };
    
-     // //close modal on pressing enter
-     // window.addEventListener("keydown",function(event){
-     //   if(event.key === 'Enter'){
-     //     openModal();
-     //   }
-     // })
-   })
+     //close modal on pressing enter
+    //  window.addEventListener("keydown",function(event){
+    //    if(event.key === 'Enter'){
+    //      openModal();
+    //    }
+    //  })
+   });
    
  
  

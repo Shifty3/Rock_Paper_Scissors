@@ -65,35 +65,6 @@ body {
     box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
   }
   
-  /* win tie lose
-  .score-title{
-    display: flex;
-    width: 50%;
-    height: 25px;
-    margin-top: 5rem;
-    justify-self: center;
-    text-align: center;
-    font-size: large;
-  }
-  
-  /* score boxes */
-  /* .score{
-    display: flex;
-    width: 50%;
-    height: 120px;
-    justify-self: center;
-  }
-  
-  .counter{
-    align-self: center;
-    width: 90%;
-    height: 90%;
-    margin: 1px;
-    border: 1px solid lightgray;
-    border-radius: 15px;
-    background-color:azure;
-    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
-  } */ 
   
   /* modal styling */
   .modal{
